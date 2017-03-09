@@ -49,10 +49,12 @@
         });
 
         document.getElementById('saveInfo').addEventListener('click', function() {
-          //alert('12321');
+          alert('12321');
           var myObject, newfile;
           myObject = new ActiveXObject("Scripting.FileSystemObject");
-          newfile = myObject.CreateTextFile("c:\\testing.txt", false);
+          newfile = myObject.CreateTextFile("c:\\test.txt", false);
+          newfile.WriteLine("test123abc");
+          newfile.Close();
         });
       }
 
